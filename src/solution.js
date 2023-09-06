@@ -48,4 +48,5 @@ function getting_lengdig(l,w){
 let l =5;
 let w = 5;
 
+console.log(getting_area(l,w),(" "),getting_perimeter(l,w),(" "),getting_lengdig(l,w));
 
