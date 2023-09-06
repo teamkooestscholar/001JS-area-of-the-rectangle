@@ -36,19 +36,31 @@ function CalculateDiagonal(w, h) {
     console.log("nice one bro ")
   }
 
-function calculateRectangleArea(width, height) {
-  const a = width * height;
-  return a;
+
+ if (isNaN(h)){
+  console.log("The entered Height is not a number")
+  // let h = prompt("Enter height ");
+}
+  else {
+    // let h = prompt("Enter height ");
+    console.log("Nice one bro")
   }
+
+
   
-  
-  
-  let width = prompt("Enter Width");
-  let height = prompt("Enter height");
-  
-  var area = calculateRectangleArea(width, height);
+  var area = calculateRectangleArea(w, h);
   console.log("The Area is "+ area);
-  Number.isNaN(area);
+
+
+  var area = CalculatePerimeter(w, h);
+  console.log("The Perimeter of the triangle is "+ area);
+
+
+  var area = CalculateDiagonal(w, h);
+  console.log("The Diagonal of the rectangle is "+ area);
+
+
+
   
-  console.log(Number.isNaN);
+  // console.log(Number.isNaN);
   
