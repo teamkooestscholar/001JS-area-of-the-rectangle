@@ -1,5 +1,5 @@
 
-function calculateRectangleArea(width,height) {
+function calculateRectangleArea(widthh,height) {
   // formula of the area
   let area = width * height;
 
