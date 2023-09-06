@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * TASKS:
  * - Create a function called calculateRectangleArea that accepts 2 parameters: width and height.
@@ -33,10 +32,3 @@ console.log(calculateRectangleArea(10, 7)); // Output -> AREA: 70, PERIMETER: 34
 
 
 
-=======
-// Function to calculate the area of a rectangle
-function calculateRectangleArea(_, _) {
-  // Put your code here
-}
-
->>>>>>> parent of 834dd09... Merge pull request #1 from cortezrc6/std-rollycortez
