@@ -7,13 +7,13 @@ function calculateRectangleArea(width,height) {
   return area;
 }
   function calculateRectanglePerimeter(width,height) {
-  let perimeter = (length+width) * 2;
+  let perimeter = (height+width) * 2;
 
   // Return the Perimeter
   return perimeter;
 }
   function calculateRectangleDiagonal(width,height){
-  let diagonal =(length^2 + width^2)**2;
+  let diagonal = Math.sqrt(height*height + width*width);
 
   // Return the Diagonal
   return diagonal;
