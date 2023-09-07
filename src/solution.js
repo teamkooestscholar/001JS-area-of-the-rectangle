@@ -11,7 +11,7 @@ function getting_area(l,w){
   }
   return a;
 }
-
+// Function to calculate the perimeter
 function getting_perimeter(l, w){
   let b;
   if (isNaN(l) || isNaN(w)){
@@ -27,7 +27,7 @@ function getting_perimeter(l, w){
 }
  
 
-
+// Function to calculate length of the diagonal
 function getting_lengdig(l,w){
   let c,d,e;
   if (isNaN(l) || isNaN(w)){
