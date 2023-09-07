@@ -1,5 +1,6 @@
+
 const prompt=require("prompt-sync")({sigint:true});
-function Solving(a, b)
+function Solvings(a, b)
 {
   if (isNaN(a) || isNaN(b)) 
   {
@@ -10,8 +11,9 @@ function Solving(a, b)
     const z = a * b;
     return z; 
   }
+
 }
-function Diagonal(a, b)
+function Diagonals(a, b)
 {
   if (isNaN(a) || isNaN(b)) 
   {
@@ -24,7 +26,7 @@ function Diagonal(a, b)
     return d;
   }
 }
-function Perimeter(a,b)
+function Perimeters(a,b)
 {
   if (isNaN(a) || isNaN(b)) 
   {
@@ -39,7 +41,7 @@ function DisplayError(a,b)
 {
   if (isNaN(a) || isNaN(b)) 
   {
-    console.log("Error make sure the variables is only a number " + "'" + a + "'" +"  and  " + "'" + b + "'"+ "  .");
+    console.log("Error make sure the variables is only a number  " + "'" + a + "'" +"  and  " + "'" + b + "'"+ "  .");
     process.exit(1);
   } 
   else 
@@ -51,14 +53,14 @@ let a, b;
 a = prompt("Width of the rectangle: ");
 b = prompt("Height of the rectangle: ");
 
-var Solvings = Solving(a,b);
-var Diagonals = Diagonal(a,b);
-var Perimeters = Perimeter(a,b);
+var Solving = Solvings(a,b);
+var Diagonal = Diagonals(a,b);
+var Perimeter = Perimeters(a,b);
 var DisplayErrors = DisplayError(a,b);
 
-console.log("Width Registered:" +  a );
-console.log("Height Registered:" +  b );
-console.log("Diagonal Measurement of the Rectangle : " + Math.ceil(Diagonals) + ".");
-console.log("Perimeter of the rectangle: " + Perimeters + ".");
-console.log("Area of rectangle: " + Solvings + ".");
+console.log("Width Registered:" + a );
+console.log("Height Registered:" + b );
+console.log("The Diagonal Measurement of the Rectangle is: " + Math.ceil(Diagonal) + ".");
+console.log("The Perimeter of the Rectangle Is: " + Perimeter + ".");
+console.log("The Area of the Rectangle Is: " + Solving + ".");
 
