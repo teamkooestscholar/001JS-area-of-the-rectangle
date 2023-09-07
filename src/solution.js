@@ -53,14 +53,16 @@ function displayError(w,h)
     console.log("ERROR: Variable Invalid but It's Okay! Just check Width & Height Values " + "'" + w + "'" +"  and  " + "'" + h + "'"+ "  .");
     console.log("NOTE: MAKE SURE VARIABLES ARE NUMBERS!");
     process.exit(1);
-  } 
+  }
   else 
   {
     console.log("!!~Values Registered Succefully~!!");
     console.log(" ");
-    console.log("Good Job!");
+    console.log("Good Job It Worked!");
   }
 }
+
+
 
 //Registered Variables
 let w, h;
@@ -71,7 +73,7 @@ h = prompt("What Height You Want: ");
 var solby = solbing(w,h);
 var diagy = diagons(w,h);
 var perip = perimeter(w,h);
-var disror = displayError(w,h);
+//var NumRorW = NumRorDU(w);
 
 //Prompt Output For Variables and Functions
 console.log(" ");
