@@ -1,51 +1,42 @@
 // Function to calculate the area of a rectangle
-function getting_area(l,w){
-  let a;
-  if (isNaN(l) || isNaN(w)){
+function calculateArea(length, width) {
+  let area;
+  if (isNaN(length) || isNaN(width)) {
     return "error";
-    
+  } else {
+    area = length * width;
   }
-  else{
-     a = l*w;
-    
-  }
-  return a;
+  return area;
 }
 
-function getting_perimeter(l, w){
-  let b;
-  if (isNaN(l) || isNaN(w)){
+function calculatePerimeter(length, width) {
+  let perimeter;
+  if (isNaN(length) || isNaN(width)) {
     return "error";
-    
+  } else {
+    perimeter = 2 * (length + width);
   }
-  else{
-    b = 2 * (l + w);
-    
-    
-  }
-  return b;
+  return perimeter;
 }
- 
 
-
-function getting_lengdig(l,w){
-  let c,d,e;
-  if (isNaN(l) || isNaN(w)){
+function calculateDiagonal(length, width) {
+  let diagonal;
+  if (isNaN(length) || isNaN(width)) {
     return "error";
-    
+  } else {
+    const squaredLength = Math.pow(length, 2);
+    const squaredWidth = Math.pow(width, 2);
+    diagonal = Math.sqrt(squaredLength + squaredWidth);
   }
-  else{
-  c = Math.pow(l,2);
-  d = Math.pow(w,2);
-  e = Math.sqrt(c + d);
- 
-    
-  }
-  return e;
+  return diagonal;
 }
- 
- 
-let l =5;
-let w = 5;
 
-console.log(getting_area(l,w),(" "),getting_perimeter(l,w),(" "),getting_lengdig(l,w));
+let length = 5;
+let width = 5;
+
+console.log(
+  "Area:", calculateArea(length, width),
+  "Perimeter:", calculatePerimeter(length, width),
+  "Diagonal:", calculateDiagonal(length, width)
+);
+
