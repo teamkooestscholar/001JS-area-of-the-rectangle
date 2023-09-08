@@ -41,8 +41,9 @@ function calcLengthDiagonal(l,w){
   return e;
 }
 
-let l =5;
-let w = 5;
+let l =10;
+let w = 15;
+
 
 console.log(calcRectArea(l,w),(" "),calcPerimeter(l,w),(" "),calcLengthDiagonal(l,w)); 
 
