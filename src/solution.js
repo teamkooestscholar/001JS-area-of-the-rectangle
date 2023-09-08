@@ -45,7 +45,6 @@ let l =10;
 let w = 15;
 
 
-console.log(calcRectArea(l,w),(" "),calcPerimeter(l,w),(" "),calcLengthDiagonal(l,w)); 
-
-
-
+console.log("Area:", calcRectArea(l, w));
+console.log("Perimeter:", calcPerimeter(l, w));
+console.log("Length of Diagonal:", calcLengthDiagonal(l, w));
