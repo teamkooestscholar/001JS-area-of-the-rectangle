@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RECTANGLE CALCULATOR | by Aires Javan Macalino</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
-</body>
-<script src="solution.js"></script>
+    <h1>RECTANGLE CALCULATOR | by Aires Javan Macalino</h1>
+    <form id="rectangleForm">
+        <label for="w">Width:</label>
+        <input type="number" id="w" step="0.01" required><br><br>
+        
+        <label for="h">Height:</label>
+        <input type="number" id="h" step="0.01" required><br><br>
+        
+        <label for="calculationType">Calculation Type:</label>
+        <select id="calculationType">
+            <option value="area">Calculate Area</option>
+            <option value="perimeter">Calculate Perimeter</option>
+            <option value="diagonal">Calculate Diagonal</option>
+        </select><br><br>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <div id="result"></div>
+<script src="solution.js">
+</script>
 </html>

@@ -1,100 +1,41 @@
-// Declarations
-const prompt = require("prompt-sync")({sigint:true});
-let w, h, choice, area, diagonal, perimeter;
-
-// Function to calculate the area of a rectangle
-function calculateRectangleArea(w,h) {
-  const a = w*h;
-  return a;
-}
-// Function to calculate the perimeter of a rectangle
-function calculateRectanglePerimeter(w,h) {
-  const p = 2*(w*h);
-  return p;
-}
-// Function to calculate the diagonal of a rectangle
-function calculateRectangleDiagonal(w,h) {
-  const d = Math.sqrt(w*w + h*h);
-  return d;
+function calculateRectangleArea(w, h) {
+    const a = w * h;
+    return a;
 }
 
-// Inputs
-start: while(true) {
-  console.log("\n------------------------------------------------\n" +
-              "! RECTANGLE CALCULATOR | by Aires Javan Macalino !\n" +
-              "[1] Calculate Area\n" + 
-              "[2] Calculate Perimeter\n" + 
-              "[3] Calculate Diagonal\n" +
-              "[0] End Program\n")
+function calculateRectanglePerimeter(w, h) {
+    const p = 2 * (w + h);
+    return p;
+}
 
-              choice = prompt("Choose formula to solve for: ");
+function calculateRectangleDiagonal(w, h) {
+    const d = Math.sqrt(w * w + h * h);
+    return d;
+}
 
-  // Process-Output
-  choice1: while(choice == 1) {
-    w = prompt("Enter value for width: ");
-    if (isNaN(w)) {
-      console.log("Entered width value is: Not a Number!");
-      w = undefined;
-      continue choice1;
-    }
-    h = prompt("Enter value for height: ");
-    if (isNaN(h)) {
-      console.log("Entered height value is: Not a Number!");
-      w = undefined;
-      continue choice1;
-    }
-    area = calculateRectangleArea(w,h);
-    console.log("The area of this rectangle is: " + area);
-    choice = undefined;
-    continue start;
-  }
+function calculate() {
+    const w = parseFloat(document.getElementById("w").value);
+    const h = parseFloat(document.getElementById("h").value);
+    const calculationType = document.getElementById("calculationType").value;
+    let result = "";
 
-  choice2: while(choice == 2) {
-    w = prompt("Enter value for width: ");
-    if (isNaN(w)) {
-      console.log("Entered width value is: Not a Number!");
-      w = undefined;
-      continue choice2;
+    if (isNaN(w) || isNaN(h)) {
+        result = "Please enter valid numeric values for w and h.";
+    } else {
+        switch (calculationType) {
+            case "area":
+                result = "The area of this rectangle is: " + calculateRectangleArea(w, h);
+                break;
+            case "perimeter":
+                result = "The perimeter of this rectangle is: " + calculateRectanglePerimeter(w, h);
+                break;
+            case "diagonal":
+                result = "The diagonal of this rectangle is: " + calculateRectangleDiagonal(w, h);
+                break;
+            default:
+                result = "Invalid calculation type.";
+        }
     }
-    h = prompt("Enter value for height: ");
-    if (isNaN(h)) {
-      console.log("Entered height value is: Not a Number!");
-      w = undefined;
-      continue choice2;
-    }
-    perimeter = calculateRectanglePerimeter(w,h);
-    console.log("The perimeter of this rectangle is: " + perimeter);
-    choice = undefined;
-    continue start;
-  }
 
-  choice3: while(choice == 3) {
-    w = prompt("Enter value for width: ");
-    if (isNaN(w)) {
-      console.log("Entered width value is: Not a Number!");
-      w = undefined;
-      continue choice3;
-    }
-    h = prompt("Enter value for height: ");
-    if (isNaN(h)) {
-      console.log("Entered height value is: Not a Number!");
-      w = undefined;
-      continue choice3;
-    }
-    diagonal = calculateRectangleDiagonal(w,h);
-    console.log("The diagonal of this rectangle is: " + diagonal);
-    choice = undefined;
-    continue start;
-  }
-
-  if (choice == 0) {
-    console.log("Thanks for using the program!");
-    return;
-  }
-
-  if (choice < 0 || choice > 3 || isNaN(choice)) {
-    console.log("The entered value is invalid!");
-    choice = undefined;
-    continue start;
-  }
+    document.getElementById("result").textContent = result;
 }
