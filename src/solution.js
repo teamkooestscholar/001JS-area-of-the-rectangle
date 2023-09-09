@@ -4,7 +4,7 @@ let w, h, choice, area, diagonal, perimeter;
 
 // Function to calculate the area of a rectangle
 function calculateRectangleArea(w,h) {
-  const a = w * h;
+  const a = w*h;
   return a;
 }
 // Function to calculate the perimeter of a rectangle
@@ -23,8 +23,8 @@ start: while(true) {
   console.log("\n------------------------------------------------\n" +
               "! RECTANGLE CALCULATOR | by Aires Javan Macalino !\n" +
               "[1] Calculate Area\n" + 
-              "[2] Calculate Diagonal\n" + 
-              "[3] Calculate Perimeter\n" +
+              "[2] Calculate Perimeter\n" + 
+              "[3] Calculate Diagonal\n" +
               "[0] End Program\n")
 
               choice = prompt("Choose formula to solve for: ");
@@ -92,7 +92,7 @@ start: while(true) {
     return;
   }
 
-  if (choice < 0, choice > 3, isNaN(choice)) {
+  if (choice < 0 || choice > 3 || isNaN(choice)) {
     console.log("The entered value is invalid!");
     choice = undefined;
     continue start;
