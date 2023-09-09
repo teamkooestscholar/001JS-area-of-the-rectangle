@@ -7,15 +7,15 @@ function calculateRectangleArea(w,h) {
   const a = w * h;
   return a;
 }
-// Function to calculate the diagonal of a rectangle
-function calculateRectangleDiagonal(w,h) {
-  const d = Math.sqrt(w*w + h*h);
-  return d;
-}
 // Function to calculate the perimeter of a rectangle
 function calculateRectanglePerimeter(w,h) {
   const p = 2*(w*h);
   return p;
+}
+// Function to calculate the diagonal of a rectangle
+function calculateRectangleDiagonal(w,h) {
+  const d = Math.sqrt(w*w + h*h);
+  return d;
 }
 
 // Inputs
@@ -62,8 +62,8 @@ start: while(true) {
       w = undefined;
       continue choice2;
     }
-    diagonal = calculateRectangleDiagonal(w,h);
-    console.log("The diagonal of this rectangle is: " + diagonal);
+    perimeter = calculateRectanglePerimeter(w,h);
+    console.log("The perimeter of this rectangle is: " + perimeter);
     choice = undefined;
     continue start;
   }
@@ -81,14 +81,8 @@ start: while(true) {
       w = undefined;
       continue choice3;
     }
-    perimeter = calculateRectanglePerimeter(w,h);
-    console.log("The perimeter of this rectangle is: " + perimeter);
-    choice = undefined;
-    continue start;
-  }
-
-  if (choice < 1, choice > 3, isNaN(choice)) {
-    console.log("The entered value is invalid!");
+    diagonal = calculateRectangleDiagonal(w,h);
+    console.log("The diagonal of this rectangle is: " + diagonal);
     choice = undefined;
     continue start;
   }
@@ -96,5 +90,11 @@ start: while(true) {
   if (choice == 0) {
     console.log("Thanks for using the program!");
     return;
+  }
+
+  if (choice < 0, choice > 3, isNaN(choice)) {
+    console.log("The entered value is invalid!");
+    choice = undefined;
+    continue start;
   }
 }
