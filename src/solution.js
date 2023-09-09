@@ -1,3 +1,4 @@
+// Use HTML Live Server for User Input
 function calculateRectangleArea(w, h) {
     const a = w * h;
     return a;
