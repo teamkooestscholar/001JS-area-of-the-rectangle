@@ -17,9 +17,9 @@ function calculateRectangleArea(w, h) {
 
 * Make sure that all inputs are numbers. Display an error message if the user did not enter numbers for the width and height. (Hint: Look into the `isNaN()` function.) **[+5 extra credit points]**
 
-* Calculate and display the perimeter of the rectangle. **[+5 extra credit points]**
+* Calculate and display the perimeter of the rectangle. (Hint: Look into the `Math` object.) **[+5 extra credit points]**
 
-* Calculate and display the length of the diagonal. **[+5 extra credit points]**
+* Calculate and display the length of the diagonal. (Hint: Look into the `Math` object.) **[+5 extra credit points]**
 
 ## How to answer?
 
