@@ -7,7 +7,7 @@ function calculateRectanglePerimeter(w, l) {
   if(isNaN(w, l)) {
     return 'Error: the entered value is not a number';
   }
-
+  
   return "Perimeter is:" + p;
 }
 
