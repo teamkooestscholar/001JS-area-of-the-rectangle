@@ -64,3 +64,4 @@ function CalculateDiagonal(w, h) {
   
   // console.log(Number.isNaN);
   
+  //will also add co author
