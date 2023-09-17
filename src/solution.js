@@ -15,3 +15,5 @@ function calculateRectangleArea(width, height) {
   const heightInput = 10;
   const result = calculateRectangleArea(widthInput, heightInput);
   console.log(result);
+
+  //edit
